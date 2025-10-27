@@ -19,7 +19,7 @@ Aplikasi ini dibuat murni menggunakan **HTML**, **CSS (Bootstrap)**, dan **JavaS
 
 ## Tangkapan Layar (Screenshot)
 
-![Screenshot Aplikasi Dashboard](Habbi Widagdo_123140204_Pertemuan2/Screenshot 2025-10-27 185805.png)
+![Screenshot Aplikasi Dashboard](Screenshot%2025-10-27%185805.png)
 
 ## Cara Menjalankan
 
@@ -53,4 +53,5 @@ Sesuai dengan kriteria penilaian, proyek ini mengimplementasikan beberapa fitur 
     * Menggunakan `class Task` sebagai *blueprint* (cetak biru) untuk membuat setiap objek tugas.
 
     * *Class* ini mencakup `constructor` untuk mengatur properti (id, judul, matkul, dll.) dan *method* (seperti `.toggleComplete()`) untuk mengelola status tugas.
+
 

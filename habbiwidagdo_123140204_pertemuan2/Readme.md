@@ -19,7 +19,7 @@ Aplikasi ini dibuat murni menggunakan **HTML**, **CSS (Bootstrap)**, dan **JavaS
 
 ## Tangkapan Layar (Screenshot)
 
-![Screenshot Aplikasi Dashboard](Habbi Widagdo_123140204_Pertemuan2/Screenshot%202025-10-2720%185805.png)
+![Screenshot Aplikasi Dashboard](Habbi Widagdo_123140204_Pertemuan2/Screenshot%202025-10-27%20185805.png)
 
 ## Cara Menjalankan
 

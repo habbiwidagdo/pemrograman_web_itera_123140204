@@ -1,16 +1,41 @@
-# React + Vite
+# Aplikasi Manajemen Buku Pribadi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi Manajemen Buku Pribadi adalah aplikasi React sederhana yang dibuat untuk memenuhi tugas praktikum. Aplikasi ini memungkinkan pengguna untuk melacak koleksi buku pribadi mereka, mencatat buku yang sedang dibaca, atau buku yang ingin dibeli.
 
-Currently, two official plugins are available:
+Data aplikasi disimpan di `localStorage` browser, sehingga data akan tetap ada meskipun browser ditutup.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📸 Tampilan Antarmuka
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Halaman Utama
+Menampilkan daftar semua buku dengan filter status dan fitur pencarian.
+![Beranda](beranda.png)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Halaman Tambah/Edit
+Formulir untuk menambah atau mengedit data buku, lengkap dengan validasi error.
+![Tambah Buku](tambahbuku.png)
+
+
+---
+
+## 📚 Tech Stack Utama
+
+* React.js (v18+)
+* Vite (sebagai *build tool* dan *dev server*)
+* React Router (v6)
+* React Hooks (useState, useEffect, useContext)
+* Vitest & React Testing Library (untuk *unit testing*)
+* Browser `localStorage` (untuk persistensi data)
+
+---
+
+## 🚀 Instalasi dan Menjalankan Proyek
+
+Ikuti langkah-langkah ini untuk menjalankan proyek di komputer lokal Anda.
+
+### 1. Clone Repositori
+```bash
+git clone [URL_REPOSITORI_ANDA]
+cd [NAMA_FOLDER_PROYEK]

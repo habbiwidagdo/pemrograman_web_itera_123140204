@@ -30,12 +30,3 @@ Formulir untuk menambah atau mengedit data buku, lengkap dengan validasi error.
 * Browser `localStorage` (untuk persistensi data)
 
 ---
-
-## 🚀 Instalasi dan Menjalankan Proyek
-
-Ikuti langkah-langkah ini untuk menjalankan proyek di komputer lokal Anda.
-
-### 1. Clone Repositori
-```bash
-git clone [URL_REPOSITORI_ANDA]
-cd [NAMA_FOLDER_PROYEK]

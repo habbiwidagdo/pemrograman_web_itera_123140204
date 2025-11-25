@@ -40,10 +40,6 @@ Fitur `search_item()` mendukung pencarian berdasarkan:
 ---
 
 ## Screenshot Hasil Running Program
-
-> **Catatan:** Ganti bagian berikut dengan screenshot milik Anda  
-> (cukup tempelkan gambar dalam folder repo dan panggil seperti contoh)
-
 ![Screenshot Program](./Screenshot.png)
 
 ---

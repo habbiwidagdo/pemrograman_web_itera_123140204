@@ -1,10 +1,10 @@
-# 📚 Sistem Manajemen Perpustakaan (OOP Python)
+# Sistem Manajemen Perpustakaan (OOP Python)
 
 Program ini merupakan implementasi konsep **Object-Oriented Programming (OOP)** dalam bahasa Python untuk mensimulasikan sistem manajemen perpustakaan sederhana. Program mendemonstrasikan penggunaan **abstract class**, **inheritance**, **polymorphism**, **encapsulation**, serta **property decorator**.
 
 ---
 
-## ✨ Fungsi Program & Fitur-Fitur
+## Fungsi Program & Fitur-Fitur
 
 ### 1. **Manajemen Item Perpustakaan**
 Program mampu mengelola dua jenis item:
@@ -39,72 +39,103 @@ Fitur `search_item()` mendukung pencarian berdasarkan:
 
 ---
 
-## 🖥️ Screenshot Hasil Running Program
+## Screenshot Hasil Running Program
 
 > **Catatan:** Ganti bagian berikut dengan screenshot milik Anda  
 > (cukup tempelkan gambar dalam folder repo dan panggil seperti contoh)
 
-![Screenshot Program](./screenshot-output.png)
+![Screenshot Program](./Screenshot.png)
 
 ---
 
-## 📐 Diagram Class (Opsional – Nilai Tambah)
+## Diagram Class (Opsional – Nilai Tambah)
 
 Berikut diagram class dalam bentuk UML sederhana:
 
-+----------------------+
-| <<abstract>> |
-| LibraryItem |
-+----------------------+
-| - _item_id |
-| - _title |
-| - _year |
-| - _is_available |
-+----------------------+
-| + display_info() |
-| + get_summary() |
-| + mark_as_borrowed() |
-| + mark_as_returned() |
-| + get_title() |
-| + get_id() |
-| + is_available() |
-+----------------------+
-        ▲
-        |
-+---------------------------+
-| Book |
-+---------------------------+
-| - _author |
-| - __isbn |
-+---------------------------+
-| + display_info() |
-| + get_summary() |
-| + isbn (getter/setter) |
-+---------------------------+
-        ▲
-        |
-+---------------------------+
-| Magazine |
-+---------------------------+
-| - _issue_number |
-+---------------------------+
-| + display_info() |
-| + get_summary() |
-+---------------------------+
+## 🧩 1. Class: `LibraryItem` (Abstract)
 
-+---------------------------+
-| Library |
-+---------------------------+
-| - __collection |
-+---------------------------+
-| + add_item() |
-| + display_available_items()|
-| + search_item() |
-+---------------------------+
+| **Nama Class** | `LibraryItem` *(abstract)* |
+|----------------|-----------------------------|
+
+### Atribut
+| Visibility | Atribut | Deskripsi |
+|-----------|---------|------------|
+| `-` | `_item_id` | ID unik item |
+| `-` | `_title` | Judul item |
+| `-` | `_year` | Tahun terbit |
+| `-` | `_is_available` | Status ketersediaan item |
+
+### Metode
+| Visibility | Method | Deskripsi |
+|-----------|--------|-----------|
+| `+` | `display_info()` | Menampilkan informasi lengkap item |
+| `+` | `get_summary()` | Mengembalikan ringkasan item |
+| `+` | `mark_as_borrowed()` | Menandai item sebagai dipinjam |
+| `+` | `mark_as_returned()` | Menandai item sebagai dikembalikan |
+| `+` | `get_title()` | Mengambil judul item |
+| `+` | `get_id()` | Mengambil ID item |
+| `+` | `is_available()` | Mengecek apakah item tersedia |
 
 ---
 
-## 🏁 Cara Menjalankan Program
+## 📚 2. Class: `Book`
+
+| **Nama Class** | `Book` *(extends LibraryItem)* |
+|----------------|--------------------------------|
+
+### Atribut
+| Visibility | Atribut | Deskripsi |
+|-----------|---------|------------|
+| `-` | `_author` | Nama penulis |
+| `-` | `__isbn` | Nomor ISBN (private) |
+
+### Metode
+| Visibility | Method | Deskripsi |
+|-----------|--------|-----------|
+| `+` | `display_info()` | Menampilkan info lengkap buku |
+| `+` | `get_summary()` | Ringkasan informasi buku |
+| `+` | `isbn` *(getter/setter)* | Akses dan ubah ISBN |
+
+---
+
+## 📰 3. Class: `Magazine`
+
+| **Nama Class** | `Magazine` *(extends LibraryItem)* |
+|----------------|------------------------------------|
+
+### Atribut
+| Visibility | Atribut | Deskripsi |
+|-----------|---------|------------|
+| `-` | `_issue_number` | Nomor edisi majalah |
+
+### Metode
+| Visibility | Method | Deskripsi |
+|-----------|--------|-----------|
+| `+` | `display_info()` | Menampilkan info lengkap majalah |
+| `+` | `get_summary()` | Ringkasan informasi majalah |
+
+---
+
+## 🏛️ 4. Class: `Library`
+
+| **Nama Class** | `Library` |
+|----------------|-----------|
+
+### Atribut
+| Visibility | Atribut | Deskripsi |
+|-----------|---------|------------|
+| `-` | `__collection` | Daftar objek `LibraryItem` |
+
+### Metode
+| Visibility | Method | Deskripsi |
+|-----------|--------|-----------|
+| `+` | `add_item()` | Menambahkan item baru ke perpustakaan |
+| `+` | `display_available_items()` | Menampilkan semua item yang tersedia |
+| `+` | `search_item()` | Mencari item berdasarkan judul atau ID |
+
+---
+
+## Cara Menjalankan Program
 
 1. Pastikan Python 3.x terinstal.
 2. Simpan kode ke file bernama `library.py`.

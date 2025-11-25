@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aplikasi Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Manajemen Tugas Mahasiswa</h1>
+            <p class="subtitle">Tambah, edit, tandai selesai, dan atur tugas kuliahmu — semuanya tersimpan secara lokal
+                (localStorage).</p>
+        </header>
+
+
+        <section class="card form-card">
+            <form id="task-form">
+                <input type="hidden" id="task-id" />
+
+
+                <div class="row">
+                    <label for="task-name">Nama Tugas</label>
+                    <input id="task-name" type="text" placeholder="Contoh: Laporan Praktikum Sistem Operasi" required />
+                </div>
+
+
+                <div class="row">
+                    <label for="task-course">Mata Kuliah</label>
+                    <input id="task-course" type="text" placeholder="Contoh: Sistem Operasi" required />
+                </div>
+
+
+                <div class="row">
+                    <label for="task-deadline">Deadline</label>
+                    <input id="task-deadline" type="date" required />
+                </div>
+
+
+                <div class="actions">
+                    <button type="submit" id="submit-btn">Tambah Tugas</button>
+                    <button type="button" id="reset-btn" class="secondary">Reset</button>
+                </div>
+
+
+                <p id="form-error" class="error" aria-live="polite"></p>
+            </form>
+        </section>
+
+
+        <section class="card controls">
+            <div class="filters">
+                <label>
+                    Filter status:
+                    <select id="filter-status">
+                        <option value="all">Semua</option>
+                        <option value="pending">Belum Selesai</option>
+                        <option value="completed">Selesai</option>
+                    </select>
+                </label>
+
+
+                <label>
+                    Cari / Mata Kuliah:
+                    <input id="search-input" type="search" placeholder="Ketik nama tugas atau mata kuliah..." />
+                </label>
+
+
+                <button id="clear-storage" class="danger">Hapus Semua Data</button>
+            </div>
+
+
+            <div class="summary">
+                <span id="pending-count">0</span> tugas belum selesai
+            </div>
+        </section>
+
+
+        <section class="card list-card">
+            <ul id="task-list" class="task-list"></ul>
+        </section>
+
+
+        <footer>
+            <small>Data tersimpan lokal pada browser (localStorage). Tekan "Hapus Semua Data" untuk
+                mengosongkan.</small>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

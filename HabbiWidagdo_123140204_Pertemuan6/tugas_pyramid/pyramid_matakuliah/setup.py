@@ -29,9 +29,9 @@ tests_require = [
 ]
 
 setup(
-    name='pyramid_mahasiswa',
+    name='pyramid_matakuliah',
     version='0.0',
-    description='pyramid_mahasiswa',
+    description='pyramid_matakuliah',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
         'Programming Language :: Python',
@@ -52,10 +52,10 @@ setup(
     install_requires=requires,
     entry_points={
         'paste.app_factory': [
-            'main = pyramid_mahasiswa:main',
+            'main = pyramid_matakuliah:main',
         ],
         'console_scripts': [
-            'initialize_pyramid_mahasiswa_db = pyramid_mahasiswa.scripts.initialize_db:main',
+            'initialize_pyramid_matakuliah_db = pyramid_matakuliah.scripts.initialize_db:main',
         ],
     },
 )
